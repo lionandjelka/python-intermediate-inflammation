@@ -1,5 +1,6 @@
 """Tests for statistics functions within the Model layer."""
 
+import pytest
 
 
 @pytest.mark.parametrize(
@@ -40,7 +41,6 @@ def test_daily_min(test, expected):
 
 
 
-import pytest
 
 
 
