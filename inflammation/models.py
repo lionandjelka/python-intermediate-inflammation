@@ -33,7 +33,7 @@ def daily_max(data):
    :param data: A 2D data array with inflammation data (each row contains measurements for a single patient across all days).
    :returns: An array of max values of measurements for each day.
    """
-   return np.max(data, axis=0)
+    return np.max(data, axis=0)
 
 
 def daily_min(data):

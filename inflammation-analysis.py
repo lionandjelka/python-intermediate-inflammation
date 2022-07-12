@@ -26,7 +26,7 @@ def main(args):
 
         views.visualize(view_data)
 
-        
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='A basic patient inflammation data management system')
