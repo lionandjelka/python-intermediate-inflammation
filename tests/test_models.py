@@ -58,6 +58,7 @@ def test_daily_min_string():
         (3, None, TypeError),
         ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[0.33, 0.67, 1], [0.67, 0.83, 1], [0.78, 0.89, 1]],None,),
     ])
+
 def test_patient_normalise(test, expected, expect_raises):
     """Test normalisation works for arrays of one and positive integers."""
     from inflammation.models import patient_normalise
