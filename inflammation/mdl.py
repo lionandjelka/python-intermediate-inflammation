@@ -2,8 +2,8 @@
 
 The Model layer is responsible for the 'business logic' part of the software.
 
-Patients' data is held in an inflammation table (2D array) where each row contains 
-inflammation data for a single patient taken over a number of days 
+Patients' data is held in an inflammation table (2D array) where each row contains
+inflammation data for a single patient taken over a number of days
 and each column represents a single day across all patients.
 """
 
@@ -16,7 +16,8 @@ class Observation:
         self.value = value
     def __str__(self):
         return self.value
-
+    def __eq__(self, other):
+        return (self.day,self.value) == (other.day,other.value)
 
 class Person:
     def __init__(self, name):
@@ -32,6 +33,7 @@ class Patient(Person):
         self.observations = []
         if observations is not None:
             self.observations = observations
+
     def add_observation(self, value, day=None):
         if day is None:
             try:
@@ -41,6 +43,9 @@ class Patient(Person):
         new_observation = Observation(value, day)
         self.observations.append(new_observation)
         return new_observation
+
+    def __eq__(self, other):
+        return (self.name, self.observations) == (other.name, other.observations)
 
 
 class Doctor(Person):
