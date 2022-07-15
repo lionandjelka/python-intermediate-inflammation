@@ -1,0 +1,12 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Inflammation exercise
+message: please cite it in your publications
+type: software
+authors:
+  - given-names: Sherlock
+    family-names: Holmes
+    email: holmes@gmail.com
+    affiliation: Privat agency
